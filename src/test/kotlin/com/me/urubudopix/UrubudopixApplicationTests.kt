@@ -1,4 +1,4 @@
-package com.example.urubudopix
+package com.me.urubudopix
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

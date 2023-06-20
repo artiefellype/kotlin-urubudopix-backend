@@ -1,4 +1,4 @@
-package com.example.urubudopix
+package com.me.urubudopix
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
