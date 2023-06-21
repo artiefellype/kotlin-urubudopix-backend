@@ -10,7 +10,6 @@ plugins {
 
 group = "com.me"
 version = "0.0.1-SNAPSHOT"
-
 java {
 	sourceCompatibility = JavaVersion.VERSION_17
 }
@@ -27,11 +26,12 @@ dependencies {
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation("com.ninja-squad:springmockk:3.0.1")
 }
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
-		freeCompilerArgs += "-Xjsr305=strict"
+		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "17"
 	}
 }
