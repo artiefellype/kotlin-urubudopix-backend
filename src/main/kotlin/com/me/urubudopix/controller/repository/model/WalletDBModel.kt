@@ -8,8 +8,8 @@ import java.util.UUID
 
 @Entity
 class WalletDBModel (
-    val money: Double,
-    @OneToOne(mappedBy = "wallet", fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
+    var money: Double,
+    @OneToOne(mappedBy = "userWallet", fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
     @JsonIgnore
     var user: UserDBModel? = null
 
@@ -18,7 +18,7 @@ class WalletDBModel (
     @GeneratedValue
     var id: UUID? = null
         private set
-    val date: Date = Date()
+    val createdAt: Date = Date()
 
 
 

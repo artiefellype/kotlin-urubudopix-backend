@@ -4,13 +4,14 @@ import com.me.urubudopix.controller.repository.model.WalletDBModel
 import java.util.*
 
 class WalletModelDTO(
-    var money: Double = 0.00,
-    val date: Date? = null,
+    var money: Double ,
+    val createdAt: Date? = null,
     val id: String? = null
 )
 
 fun WalletDBModel.convertToWalletModelDTO() = WalletModelDTO (
     money = this.money,
-    date = this.date,
+    createdAt = this.createdAt,
     id = this.id.toString()
 )
+

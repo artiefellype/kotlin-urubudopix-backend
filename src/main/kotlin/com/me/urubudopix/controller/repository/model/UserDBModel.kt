@@ -12,13 +12,13 @@ class UserDBModel(
     @OneToOne
     @JoinColumn(name = "wallet_id")
     @JsonIgnore
-    var wallet: WalletDBModel
+    var userWallet: WalletDBModel
 ){
     @Id
     @GeneratedValue
     var id: UUID? = null
         private set
-    val date: Date = Date()
+    val createdAt: Date = Date()
 
 
 }

@@ -6,14 +6,14 @@ import java.util.*
 
 class UserModelDTO(
     val name: String,
-    val wallet: WalletModelDTO,
-    val date: Date,
+    val userWallet: WalletModelDTO,
+    val createdAt: Date,
     val id: String
 )
 
 fun UserDBModel.convertToUserModelDTO() = UserModelDTO (
     name = this.name,
-    wallet = this.wallet.convertToWalletModelDTO(),
-    date = this.date,
+    userWallet = this.userWallet.convertToWalletModelDTO(),
+    createdAt = this.createdAt,
     id = this.id.toString()
 )

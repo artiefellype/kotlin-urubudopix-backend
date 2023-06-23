@@ -4,10 +4,10 @@ import com.me.urubudopix.controller.repository.model.UserDBModel
 
 class UserModel (
     val name: String,
-    var wallet: WalletModel
+    var userWallet: WalletModel
 ){
     fun convertToDBModel() = UserDBModel(
         name = this.name,
-        wallet = this.wallet.convertToDBModel()
+        userWallet = this.userWallet.convertToDBModel()
     )
 }
